@@ -1,0 +1,112 @@
+.main-container{
+  font-family: Helvetica Neue, sans-serif;
+  .details-container{
+    margin-top: 45px;
+    &:after{
+      clear: both;
+      display: table;
+      content:' ';
+    }
+  }
+  .image-wrapper{
+    float: left;
+    width: 50%;
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .right-section{
+    float: right;
+    width: 50%;
+    div{
+      text-transform: uppercase;
+      &:first-child{
+        color: #cccccc;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      &:nth-child(2){
+        color: #666666;
+        margin-bottom: 5px;
+        font-size: 27px;
+      }
+    }
+    span{
+        display: inline-block;
+        color: #009dc8;
+        font-size: 20px;
+        margin-bottom: 26px;
+        margin-top: 10px;
+    }
+    .description-container{
+      div{
+        &:first-child{
+          font-size: 13px;
+          color: #555555;
+        }
+        &:last-child{
+          font-size: 15px;
+          font-weight: 200;
+          text-transform: none;
+          line-height: 25px;
+        }
+      }
+    }
+    a{
+      display: inline-block;
+      color: #666666;
+      text-transform: uppercase;
+      font-size: 10px;
+      text-decoration: none;
+      margin-bottom: 7px;
+      font-weight: 500;
+    }
+    ul{
+      color:#666666;
+      font-size: 15px;
+      font-weight: 200;
+      text-transform: none;
+      line-height: 20px;
+      li{
+        list-style: circle;
+        margin-left: 19px;
+      }
+    }
+    button{
+      display: block;
+      cursor: pointer;
+      border: none;
+      padding: 15px 25px;
+      margin-top: 25px;
+      background-color: #cb2026;
+      border-radius: 3px;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 15px;
+      color: white;
+      font-weight: 500;
+      outline: none;
+      &:active{
+        background-color: #a51a1f;
+      }
+    }
+    .quantity-container{
+      margin-top: 25px;
+      div{
+        font-weight: 500;
+        font-size: 13px;
+        color: #555555;
+      }
+      span{
+        color: #888888;
+        padding: 0 15px;
+      }
+      i{
+        cursor: pointer;
+        color: #666666;
+        font-size: 12px;
+      }
+    }
+  }
+}

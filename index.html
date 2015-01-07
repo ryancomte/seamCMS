@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="EcommerceApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="global/global.css"/>
+</head>
+<body>
+
+<div ui-view="nav"></div>
+<div ui-view="body"></div>
+
+
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-ui-router.js"></script>
+<script src="lib/angular-resource/angular-resource.min.js"></script>
+<script src="nav/nav.js"></script>
+<script src="app.js"></script>
+<script src="products/products.js"></script>
+<script src="details/details.js"></script>
+<script src="admin/addProducts.js"></script>
+<script src="global/js/localStorageService.js"></script>
+<script src="global/js/resourceFactory.js"></script>
+<script src="global/js/shoppingCartDirective.js"></script>
+<script src="addImages/images.js"></script>
+<script src="shopping-cart/shoppingCart.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<div class="main-container">
+    <div class="details-container" ng-repeat="item in products" ng-if="item.productId == prodId">
+        <!--<div class="star-rating"></div>-->
+        <div class="image-wrapper">
+            <img src="img/{{item.imgUrl}}" alt="photo"/>
+            <div class="images"></div>
+        </div>
+        <div class="right-section">
+            <div>{{item.brand}}</div>
+            <div>{{item.name}}</div>
+            <span>{{item.price | currency: "$" : 2}}</span>
+            <!--<span class="available"></span>-->
+            <!--<span class="color"></span>-->
+            <!--<span class="size"></span>-->
+            <div class="description-container">
+                <div>Description</div>
+                <div>{{item.desc}}</div>
+            </div>
+
+            <a href="" ng-init="showDetails = false" ng-click="showDetails = !showDetails"> Show Details <i class="fa fa-caret-down"></i></a>
+            <ul ng-show="showDetails">
+                <li ng-repeat="specs in item.specs">{{specs}}</li>
+            </ul>
+            <div class="quantity-container">
+                <div>Quantity</div>
+                <i class="fa fa-minus" ng-click="quantity === 1 ? quantity : quantity = quantity - 1"></i>
+                <span>{{quantity}}</span>
+                <i class="fa fa-plus" ng-click="quantity = quantity + 1"></i>
+            </div>
+            <button ng-click="addItem(item,quantity,$event)">Add to Cart</button>
+        </div>
+    </div>
+</div>

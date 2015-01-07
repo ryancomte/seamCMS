@@ -1,0 +1,20 @@
+<div class="header" ng-switch="admin">
+    <div class="inner-container" ng-switch-when="false">
+        <span><img src="../img/battleUnderground.png" alt="logo" ui-sref="products"/></span>
+        <span ui-sref="products" ui-sref-active="active">Products</span>
+        <input ng-hide="admin" type="search" placeholder="Type to Search" ng-model="product.search"/>
+        <div class="shopping-cart" ui-sref="shopping cart">
+            <span class="prod-count">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="counter" ng-show="counter">{{counter}}</span>
+            </span>
+            <div>Shopping Cart</div>
+            <div>{{shoppingCartTotal | currency: '$' : 2}}</div>
+        </div>
+    </div>
+    <div class="inner-container" ng-switch-when="true">
+        <span><img src="../img/battleUnderground.png" alt="logo" ui-sref="products"/></span>
+        <span class="add-products" ui-sref="add products" ui-sref-active="active">Add Products</span>
+        <span class="add-images" ui-sref="add images" ui-sref-active="active">Add Images</span>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="main-container">
+    <div class="top-container" ng-class="{'add-item': !addItem}" ng-show="addItem">
+        <div class="admin-container">
+            <span>
+                <label ng-click="cheatFunct()">Name</label>
+                <input type="text" ng-model="product.name"/>
+            </span>
+            <span>
+                <label>Image Url</label>
+                <input type="text" ng-model="product.imgUrl"/>
+            </span>
+            <span>
+                <label>Description</label>
+                <textarea type="text" ng-model="product.desc"/><textarea name="product description" id="prodDesc"></textarea>
+            </span>
+            <span class="add-chips">
+                <label>Specifications</label><br/>
+                <span ng-repeat="spec in specList">{{spec}}<i class="fa fa-times-circle" ng-click="removeSpec($index)"></i></span>
+                <textarea name="product specs" id="prodSpecs" rows="1" ng-model="product.spec" ng-keypress="addSpec($event,product.spec)"></textarea>
+            </span>
+            <div class="bottom-form">
+                <span>
+                    <label>Product Id</label>
+                    <input type="number" ng-model="product.productId" disabled/>
+                </span>
+                <span>
+                    <label>Brand</label>
+                    <input type="text" ng-model="product.brand"/>
+                </span>
+                <span>
+                    <label>price</label><br/>
+                    <i class="fa fa-dollar"></i><input type="number" ng-model="product.price"/>
+                </span>
+            </div>
+        </div>
+        <div class="button-bar">
+            <button class="btn main-btn" ng-click="addProduct(product)" ng-hide="edit">Add</button>
+            <button class="btn second-btn" ng-click="addProduct(product,'another')" ng-hide="edit">Add Another</button>
+            <button class="btn" ng-click="addProduct(product,'update')" ng-hide="!edit">Update</button>
+            <button class="btn cancel-btn" ng-click="addProduct(product,'cancel')">Cancel</button>
+        </div>
+    </div>
+    <div class="add-tab" ng-hide="addItem">
+        <div ng-click="showAdd()">Add Item</div>
+    </div>
+    <div class="divider-line" ng-show="addItem"></div>
+    <div class="product-count">{{productCount}} Products</div>
+    <div class="bottom-container">
+        <table>
+            <tr>
+                <th style="width: 9%">ProductID</th>
+                <th>Brand</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Specifications</th>
+                <th>Description</th>
+                <th>Image URL</th>
+                <th colspan="2">Tools</th>
+            </tr>
+            <tr ng-repeat="item in productsList">
+                <td>{{item.productId}}</td>
+                <td>{{item.brand}}</td>
+                <td style="width: 27%">{{item.name}}</td>
+                <td>{{item.price | currency : "$" : 2}}</td>
+                <td style="width: 31%">
+                    <ul>
+                        <li ng-repeat="spec in item.specs | limitTo: 3">{{spec}}</li>
+                    </ul>
+                </td>
+                <td style="width: 35%">{{item.desc | ellipsis:50}}</td>
+                <td>{{item.imgUrl}}</td>
+                <td ng-click="editProd(item)"><i class="fa fa-pencil"></i></td>
+                <td ng-click="removeProd($index,item)"><i class="fa fa-trash"></i></td>
+            </tr>
+        </table>
+    </div>
+</div>
+

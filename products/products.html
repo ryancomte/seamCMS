@@ -1,0 +1,13 @@
+<div class="tiles-container">
+    <div class="tile" ng-repeat="item in products" ui-sref="details({prodId : item.productId})">
+        <div class="actions">
+            <i class="fa fa-shopping-cart" ng-click="addItem(item, $event)"></i>
+        </div>
+        <img src="img/{{item.imgUrl}}" alt=""/>
+        <div class="details-container">
+            <div>{{item.brand}}</div>
+            <div>{{item.name}}</div>
+            <div>{{item.price | currency : "$" : 2}}</div>
+        </div>
+    </div>
+</div>
