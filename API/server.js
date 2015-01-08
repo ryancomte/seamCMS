@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 var app = express();
 mongoose.connect('mongodb://localhost/battle_underground');
 
-
 app.use(cors());
 app.use(bodyParser.json());
 

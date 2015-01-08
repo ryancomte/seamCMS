@@ -93,6 +93,12 @@
     }
     .quantity-container{
       margin-top: 25px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
       div{
         font-weight: 500;
         font-size: 13px;

@@ -96,81 +96,10 @@
           font-size: 13px;
           color: white;
         }
-//        &:nth-child(2){
-//          margin-top: -39px;
-//          font-size: 13px;
-//        }
       }
     }
-
-//    .shopping-cart{
-//      float: right;
-//      cursor: pointer;
-//      background-color: #222222;
-//      padding: 0 20px;
-//      text-transform: uppercase;
-//      height: 60px;
-//      &:after{
-//        clear: both;
-//        content: '';
-//        display: table;
-//      }
-//      .shopping-cart-inner{
-//
-//      }
-//      .counter{
-//        position: absolute;
-//        right: 126px;
-//        top: 11px;
-//        display: inline-block;
-//        float: right;
-//        background-color: red;
-//        border: none;
-//        border-radius: 50%;
-//        height: 15px;
-//        width: 15px;
-//        padding: 1px;
-//        font-size: 11px;
-//        line-height: 15px;
-//        text-align: center;
-//      }
-//      div{
-//        border: none;
-//        margin-top: -6px;
-//        &:first-child{
-//          color: #bbbbbb;
-//          font-weight: 500;
-//          font-size: 10px;
-//          letter-spacing: 1px;
-//        }
-//        &:nth-child(2){
-//          margin-top: -39px;
-//          font-size: 13px;
-//        }
-//      }
-//    }
   }
 }
 
-.shopping-cart-container{
-  color: white;
-  background-color: #222222;
-  clear: both;
-  z-index: 10000;
-  position: relative;
-  float: right;
-  .shopping-cart-item{
-    span{
-      border: none !important;
-      i{
-        float: none;
-        font-size: 14px;
-        color: #eeeeee;
-      }
-    }
-    input{
-      position: initial;
-    }
-  }
-}
+
 
